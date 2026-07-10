@@ -1,0 +1,43 @@
+{
+  "name": "Interlock",
+  "tagType": "Folder",
+  "tags": [
+    {
+      "name": "Verified",
+      "tagType": "Folder",
+      "tags": [
+        { "name": "PONumber",       "tagType": "AtomicTag", "valueSource": "memory", "dataType": "String" },
+        { "name": "MaterialNumber", "tagType": "AtomicTag", "valueSource": "memory", "dataType": "String" },
+        { "name": "BatchNumber",    "tagType": "AtomicTag", "valueSource": "memory", "dataType": "String" },
+        { "name": "VesselId",       "tagType": "AtomicTag", "valueSource": "memory", "dataType": "String" },
+        { "name": "VesselType",     "tagType": "AtomicTag", "valueSource": "memory", "dataType": "String" },
+        { "name": "VerifiedAt",     "tagType": "AtomicTag", "valueSource": "memory", "dataType": "DateTime" }
+      ]
+    },
+    {
+      "name": "Heads",
+      "tagType": "Folder",
+      "_comment": "One child folder per work center, one per filler head, created by the evaluator's first write or pre-created from this UDT-like shape.",
+      "tags": [
+        {
+          "name": "_TEMPLATE_WorkCenter",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "name": "_TEMPLATE_FillerHead",
+              "tagType": "Folder",
+              "tags": [
+                { "name": "Status",         "tagType": "AtomicTag", "valueSource": "memory", "dataType": "String", "value": "LOCKED" },
+                { "name": "PONumber",       "tagType": "AtomicTag", "valueSource": "memory", "dataType": "String" },
+                { "name": "MaterialNumber", "tagType": "AtomicTag", "valueSource": "memory", "dataType": "String" },
+                { "name": "VesselType",     "tagType": "AtomicTag", "valueSource": "memory", "dataType": "String" },
+                { "name": "Message",        "tagType": "AtomicTag", "valueSource": "memory", "dataType": "String" },
+                { "name": "LastEvaluated",  "tagType": "AtomicTag", "valueSource": "memory", "dataType": "DateTime" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
